@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "error": true,
+  "message": "Server Error",
+  "details": "Error message here"
+}
