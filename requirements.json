@@ -1,0 +1,27 @@
+{
+  "api_name": "PAN Lead Lookup API",
+  "runtime": "Cloudflare Workers",
+  "method": "GET",
+  "endpoint": "/?pan=ABCDE1234F",
+  "query_parameters": {
+    "pan": {
+      "type": "string",
+      "required": true,
+      "format": "PAN (e.g. ABCDE1234F)"
+    }
+  },
+  "headers_required": {
+    "authorization": "string (API token)",
+    "x-broker": "turtlemint",
+    "x-provider": "signzy",
+    "x-partner-id": "string",
+    "x-tenant": "turtlemint",
+    "user-agent": "Mozilla/5.0 (Android)",
+    "accept": "application/json"
+  },
+  "external_api": {
+    "url": "https://app.turtlefin.com/api/minterprise/v1/products/personal-loan/leads/existing-lead-by-pan",
+    "method": "GET"
+  },
+  "response_format": "application/json"
+}
